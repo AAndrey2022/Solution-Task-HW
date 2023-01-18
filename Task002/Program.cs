@@ -11,13 +11,13 @@ Console.Write("Введите целое число: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 if (num1 > num2)
 {
-    Console.WriteLine($"Число {num1} Max");
+    Console.WriteLine($"Число {num1} > {num2}");
 }
 if (num1 < num2)
 {
-  Console.WriteLine($"Число {num2} Max");  
+  Console.WriteLine($"Число {num2} > {num1}");  
 }
 if (num1 == num2)
 {
- Console.WriteLine($"Числа равны");   
+ Console.WriteLine($"Числа {num1} и {num2} равны");   
 }
