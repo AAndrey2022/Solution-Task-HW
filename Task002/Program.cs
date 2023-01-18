@@ -10,15 +10,8 @@ int num1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите целое число: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 if (num1 > num2)
-{
-    Console.WriteLine($"Число {num1} > {num2}");
-}
+Console.WriteLine($"Число {num1} > {num2}");
 else if (num1 < num2)
-{
-    Console.WriteLine($"Число {num2} > {num1}");
-}
+Console.WriteLine($"Число {num2} > {num1}");
 else if (num1 == num2)
-{
-    Console.WriteLine($"Числа равны");
-}
-else Console.WriteLine("Введено некорректное значение");
+Console.WriteLine($"Числа равны");
