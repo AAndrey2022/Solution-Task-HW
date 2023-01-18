@@ -13,11 +13,12 @@ if (num1 > num2)
 {
     Console.WriteLine($"Число {num1} > {num2}");
 }
-if (num1 < num2)
+else if (num1 < num2)
 {
-  Console.WriteLine($"Число {num2} > {num1}");  
+    Console.WriteLine($"Число {num2} > {num1}");
 }
-if (num1 == num2)
+else if (num1 == num2)
 {
- Console.WriteLine($"Числа {num1} и {num2} равны");   
+    Console.WriteLine($"Числа равны");
 }
+else Console.WriteLine("Введено некорректное значение");
