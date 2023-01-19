@@ -11,7 +11,8 @@ int count = 2;
  Console.Write("Не корректный ввод, Введите Натуральное (Положительное!) число: ");
  else
  while (count < num)
-  { Console.Write($" {count},");
+  { 
+    Console.Write($" {count},");
     count += 2;
   }
 
