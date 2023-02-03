@@ -3,7 +3,6 @@
 
 // [3.5, 7.1, 22.9, 2.3, 78.5] -> 76.2
 
-
 double[] CreateArrRndDouble(int size, int max, int min)
 {
     double[] array = new double[size];
@@ -16,24 +15,6 @@ double[] CreateArrRndDouble(int size, int max, int min)
     return array;
 }
 
-double DiferntMaxMinNumArray(double[] arr)
-{
-    double resMax = arr[0];
-    double resMin = arr[0];
-    for (int i = 1; i < arr.Length; i++)
-    {
-        if (resMax < arr[i])
-            
-            resMax = arr[i];
-         else
-         if (resMin>arr[i])
-            resMin=arr[i];
-           
-    }
-    return resMax - resMin;
-}
-
-
 void PrintArray(double[] array)
 {
     Console.Write("[");
@@ -43,9 +24,49 @@ void PrintArray(double[] array)
     }
     Console.Write("]");
 }
+double MaxNumArray(double[] arr)
+{
+    double resMax = arr[0];
+    for (int i = 1; i < arr.Length; i++)
+    {
+        if (resMax < arr[i])
+
+            resMax = arr[i];
+    }
+    return resMax;
+}
+
+double MinNumArray(double[] arr)
+{
+    double resMin = arr[0];
+    for (int i = 1; i < arr.Length; i++)
+    {
+        if (resMin > arr[i])
+            resMin = arr[i];
+    }
+    return resMin;
+}
+
 double[] arr = CreateArrRndDouble(5, 1, 10);
 PrintArray(arr);
-double diferntMaxMinNumArray = DiferntMaxMinNumArray(arr);
-Console.Write($" -> {Math.Round(diferntMaxMinNumArray, 1, MidpointRounding.ToZero)}");
+double maxNumArray = MaxNumArray(arr);
+double minNumArray = MinNumArray(arr);
 
-    
+Console.Write($" -> {Math.Round(maxNumArray - minNumArray, 1, MidpointRounding.ToZero)}");
+
+// double DiferntMaxMinNumArray(double[] arr)
+// {
+//     double resMax = arr[0];
+//     double resMin = arr[0];
+//     for (int i = 1; i < arr.Length; i++)
+//     {
+//         if (resMax < arr[i])
+
+//             resMax = arr[i];
+//         else
+//          if (resMin > arr[i])
+//             resMin = arr[i];
+
+//     }
+//     return resMax - resMin;
+// }
