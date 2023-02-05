@@ -38,5 +38,5 @@ void PrintMatrix(double[,] matrix)
     }
 
 }
-double[,] createMatrixRndDouble = CreateMatrixRndDouble(3, 4, -5, 5);
+double[,] createMatrixRndDouble = CreateMatrixRndDouble(3, 4, -5, 100);
 PrintMatrix(createMatrixRndDouble);
