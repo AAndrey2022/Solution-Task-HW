@@ -36,8 +36,6 @@ void PrintMatrix(int[,] matrix)
 
 }
 
-
-
 double[] SumColumnsMatrix(int[,] matrix)
 {
     double[] arr = new double[matrix.GetLength(1)];
@@ -51,18 +49,17 @@ double[] SumColumnsMatrix(int[,] matrix)
             result += matrix[i, j];
         }
         arr[j] = result;
-        Console.Write($" {Math.Round(arr[j]/matrix.GetLength(0), 1, MidpointRounding.ToZero), 4} ");
-
-        // return 
-        // res = result;
-        // ($" -> {Math.Round(maxNumArray - minNumArray, 1, MidpointRounding.ToZero)}");
+        Console.Write($" {Math.Round(arr[j] / matrix.GetLength(0), 1, MidpointRounding.ToZero),4} ");
 
     }
     return arr;
-
-
-
 }
+
+int[,] createMatrixRndInt = CreateMatrixRndInt(3, 4, -100, 100);
+
+
+PrintMatrix(createMatrixRndInt);
+double[] sumColumnsMatrix = SumColumnsMatrix(createMatrixRndInt);
 
 // double[] meanSumcColumns = MeanSumcColumns(Array);
 // double MeanSumcColumns(int[] arr)
@@ -76,11 +73,11 @@ double[] SumColumnsMatrix(int[,] matrix)
 //      return res;
 // }
 
-int[,] createMatrixRndInt = CreateMatrixRndInt(3, 4, -100, 100);
+// int[,] createMatrixRndInt = CreateMatrixRndInt(3, 4, -100, 100);
 
 
-PrintMatrix(createMatrixRndInt);
-double[] sumColumnsMatrix = SumColumnsMatrix(createMatrixRndInt);
+// PrintMatrix(createMatrixRndInt);
+// double[] sumColumnsMatrix = SumColumnsMatrix(createMatrixRndInt);
 // Console.WriteLine($"Среднее арифметическое каждого столбца:{sumColumnsMatrix}");
 
 // double meanSumcColumns = MeanSumcColumns(Array);
