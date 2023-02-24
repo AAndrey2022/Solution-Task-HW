@@ -17,6 +17,8 @@ Console.Write($"M = {number}; N = {number1} -> {summNuberSeries}, ");
 
 int SummNuberSeries(int num, int num1)
 {
+    if (number < 0 && number1 < 0)
+    return 0;
     if (num == num1) return num;
     else
     if (num < num1)
